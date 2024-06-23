@@ -1,0 +1,64 @@
+.all-movies-section {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+}
+.pagination-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
+
+.pagination li {
+  margin: 0 5px;
+  display: flex;
+}
+
+.pagination li a {
+  cursor: pointer;
+  /* padding: 8px 16px; */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  border-radius: 100px;
+  color: red !important;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: red;
+  color: aliceblue !important ;
+}
+
+.pagination li.active a {
+  background-color: red;
+  color: white !important;
+  border-color: red;
+}
+
+.pagination li.disabled a {
+  display: none;
+}
+
+.pagination .break-me {
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .all-movies-section {
+    flex-direction: column-reverse;
+  }
+}

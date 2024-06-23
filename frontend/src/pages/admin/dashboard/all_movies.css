@@ -1,0 +1,155 @@
+.allmovies-section {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+.allmovies-section-left {
+  width: 20%;
+}
+.allmovies-section-right {
+  margin: 0 10px;
+  width: 80%;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  min-width: 600px;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 12px 15px;
+  border: 1px solid #000000;
+  text-align: left;
+}
+
+.movie-table th {
+  background-color: #373646;
+  color: red;
+}
+
+.movie-table tr {
+  background-color: #373646;
+  color: aliceblue;
+}
+
+.poster {
+  width: 50px;
+  height: auto;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+.edit {
+  background-color: blue;
+  color: white;
+}
+.edit:hover {
+  background-color: transparent;
+  color: aliceblue;
+  border: 2px solid blue;
+}
+.delete {
+  color: aliceblue;
+  background-color: red;
+}
+
+.delete:hover {
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+}
+.table-img {
+  width: 100px;
+  height: 100px;
+}
+
+.movie-table th,
+.movie-table .downloads {
+  text-align: center;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-table {
+  margin: 0 !important;
+}
+
+.fullfilled {
+  background-color: greenyellow;
+  color: black;
+}
+
+.fullfilled:hover {
+  background-color: transparent;
+  color: greenyellow;
+  border: 2px solid greenyellow;
+}
+
+.center {
+  text-align: center !important;
+}
+.movies-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allmovies-input {
+  width: 40%;
+  margin-bottom: 20px;
+}
+.search-button {
+  height: 44px;
+  margin-top: 24px;
+  width: 50px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: aliceblue;
+  transition: 0.2s ease;
+}
+.search-button:hover {
+  background-color: white;
+  color: red;
+}
+.admin-search-icon {
+  font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+  .allmovies-section {
+    flex-direction: column;
+  }
+  .allmovies-section-left {
+    width: 100%;
+  }
+  .allmovies-section-right {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .edit {
+    width: 74.84px;
+  }
+  .delete {
+    margin-top: 10px;
+  }
+  .allmovies-input {
+    width: 80%;
+  }
+}

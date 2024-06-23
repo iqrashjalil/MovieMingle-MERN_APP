@@ -1,0 +1,129 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: whitesmoke;
+  flex-wrap: wrap;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.footer-left h1 {
+  color: red;
+}
+.footer-left h1 span {
+  color: #7b7a88;
+}
+
+.footer-left p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: grey;
+  font-weight: 300;
+}
+.footer-genres h1 {
+  color: #7b7a88;
+}
+.footer-genres ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.footer-genres ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.footer-genres ul li:hover {
+  color: red;
+}
+
+.footer-play-icon {
+  margin-right: 10px;
+  color: #5e5b7e;
+}
+
+.footer-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 55px;
+}
+
+.footer-right ul a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.2s ease;
+}
+
+.footer-right ul a:hover {
+  color: red;
+}
+.socials h1 {
+  color: #7b7a88;
+}
+
+.socials ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.socials ul li {
+  display: flex;
+
+  align-items: center;
+}
+
+.footer-facebook-icon {
+  color: blue;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.footer-instagram-icon {
+  color: red;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.facebook-li:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.instagram-li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.socials h1 {
+  color: #7b7a88;
+}
+.footer-hr {
+  display: none;
+  width: 50%;
+  margin: 20px 0;
+
+  height: 1px;
+  background-color: #5e5b7e;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-hr {
+    display: block;
+  }
+}

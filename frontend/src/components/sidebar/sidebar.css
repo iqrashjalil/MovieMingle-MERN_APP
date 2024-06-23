@@ -1,0 +1,154 @@
+.sidebar {
+  width: 20%;
+}
+
+.sidebar-filters {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #373646;
+  border-radius: 5px;
+}
+.sidebar-filters > .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading h4 {
+  color: #7b7a88;
+  margin: 0;
+  margin-top: 9px;
+}
+.sidebar-filters > div {
+  padding: 5%;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-icon {
+  color: red;
+  font-size: 25px;
+}
+
+.filter-btn {
+  margin: 5%;
+  width: 90%;
+  outline: none;
+  border: none;
+  padding: 2%;
+  font-weight: bold;
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: white;
+  color: red;
+}
+
+.sidebar-filters div select {
+  background-color: #2c2a36;
+  padding: 5px;
+  cursor: pointer;
+  width: 41%;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  color: white;
+}
+
+.sidebar-genres {
+  background-color: #373646;
+  height: 30vh;
+}
+.sidebar-genres-box {
+  overflow-y: scroll;
+  height: 86%;
+}
+.sidebar-genres-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-genres-box::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Dark background for track */
+}
+
+.sidebar-genres-box::-webkit-scrollbar-thumb {
+  background: red; /* Darker thumb */
+  border-radius: 10px;
+}
+
+.sidebar-genres-box::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter on hover */
+}
+.sidebar-genres ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.sidebar-genres ul li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: whitesmoke;
+  transition: 0.2s ease;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-genres ul li:hover {
+  background-color: #2c2a36;
+  color: red;
+  transform: translateX(10px);
+}
+
+.genres-icon {
+  color: red;
+  margin-right: 10px;
+}
+
+.request-movie {
+  margin-top: 20px;
+  background-color: #373646;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.request-movie-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: whitesmoke;
+}
+
+.request-movie-input input {
+  outline: none;
+  border: none;
+  background-color: #2c2a36;
+  color: whitesmoke;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar-filters div select {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .heading h4 {
+    margin-top: 7px;
+  }
+}
