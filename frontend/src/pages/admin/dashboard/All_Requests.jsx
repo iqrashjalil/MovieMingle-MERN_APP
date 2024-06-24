@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "../../../components/Loader/Loader";
 import {
   deleteRequest,
-  fetchRecentMovie,
   fetchRequestedMovies,
 } from "../../../store/slices/moviesSlice";
 import { toast } from "react-toastify";
@@ -51,36 +50,50 @@ const All_Requests = () => {
           </div>
           <div className="allmovies-section-right">
             <div className="table-container">
-              <table className="movie-table">
-                <thead>
-                  <tr>
-                    <th>Requested Movie</th>
-                    <th>Requested By</th>
-                    <th>Requested At</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {moviesrequests &&
-                    moviesrequests.requestedMovies.map((movie, index) => (
-                      <tr key={index}>
-                        <td className="center">{movie.movieName}</td>
-                        <td className="center">{movie.requestedBy}</td>
-                        <td className="center">
-                          {formatDate(movie.requestedAt)}
-                        </td>
-                        <td className="center">
-                          <button
-                            onClick={() => handleFullfilled(movie._id)}
-                            className="action-btn fullfilled"
-                          >
-                            Fulfilled
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
+              {moviesrequests?.requestedMovies.length > 0 ? (
+                <table className="movie-table">
+                  <thead>
+                    <tr>
+                      <th>Requested Movie</th>
+                      <th>Requested By</th>
+                      <th>Requested At</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {moviesrequests &&
+                      moviesrequests.requestedMovies.map((movie, index) => (
+                        <tr key={index}>
+                          <td className="center">{movie.movieName}</td>
+                          <td className="center">{movie.requestedBy}</td>
+                          <td className="center">
+                            {formatDate(movie.requestedAt)}
+                          </td>
+                          <td className="center">
+                            <button
+                              onClick={() => handleFullfilled(movie._id)}
+                              className="action-btn fullfilled"
+                            >
+                              Fulfilled
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              ) : (
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "aliceblue",
+                    height: "85vh",
+                  }}
+                >
+                  <h1>No Requests</h1>
+                </div>
+              )}
             </div>
           </div>
         </section>

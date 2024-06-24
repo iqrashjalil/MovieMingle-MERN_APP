@@ -3,6 +3,23 @@
   width: 100%;
   padding: 10px 20px;
 }
+
+.noMovies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 85vh;
+}
+.noMovies h1 {
+  color: aliceblue;
+}
+
+.notfound {
+  color: red;
+  font-size: 5rem;
+}
+
 .pagination-box {
   display: flex;
   justify-content: center;

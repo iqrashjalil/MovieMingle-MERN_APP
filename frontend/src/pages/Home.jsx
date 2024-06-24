@@ -56,73 +56,80 @@ const Home = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className="home-section">
-          <Sidebar />
-          <div className="home-container">
-            <div className="wrapper">
-              <div className="wrapper-heading">
-                <h4>Recent Added</h4>
+        <>
+          <div class="alert alert-primary" role="alert">
+            (For Admin Actions use these ("/admin/signin") - ("/admin/register")
+            - ("/admin/dashboard") infront of the url) - admin panel login
+            credentials (Email: test@gmail.com | Password: test@1)
+          </div>{" "}
+          <section className="home-section">
+            <Sidebar />
+            <div className="home-container">
+              <div className="wrapper">
+                <div className="wrapper-heading">
+                  <h4>Recent Added</h4>
+                </div>
+                <i
+                  id="left"
+                  className="fa-solid fas fa-angle-left"
+                  onClick={scrollLeft}
+                ></i>
+                <div className="carousel" ref={carouselRef}>
+                  {recentMovie &&
+                    recentMovie.map((movie, index) => (
+                      <div key={index}>
+                        <Card movie={movie.id} data={movie} />
+                      </div>
+                    ))}
+                </div>
+                <i
+                  id="right"
+                  className="fa-solid fas fa-angle-right"
+                  onClick={scrollRight}
+                ></i>
               </div>
-              <i
-                id="left"
-                className="fa-solid fas fa-angle-left"
-                onClick={scrollLeft}
-              ></i>
-              <div className="carousel" ref={carouselRef}>
-                {recentMovie &&
-                  recentMovie.map((movie, index) => (
-                    <div key={index}>
-                      <Card movie={movie.id} data={movie} />
-                    </div>
-                  ))}
+              <div className="wrapper">
+                <div className="wrapper-heading">
+                  <h4>All Movies</h4>
+                  <NavLink className="view-more-btn" to={"/all/movies"}>
+                    View More
+                  </NavLink>
+                </div>
+                <div className="all-movies-home">
+                  {allMovies &&
+                    allMovies.map((movie, index) => (
+                      <div key={index}>
+                        <Card data={movie} />
+                      </div>
+                    ))}
+                </div>
               </div>
-              <i
-                id="right"
-                className="fa-solid fas fa-angle-right"
-                onClick={scrollRight}
-              ></i>
+              <div className="wrapper">
+                <div className="wrapper-heading">
+                  <h4>Trending Movies</h4>
+                </div>
+                <i
+                  id="left"
+                  className="fa-solid fas fa-angle-left"
+                  onClick={scrollleftTrending}
+                ></i>
+                <div className="carousel" ref={carouselRefTrending}>
+                  {trendingMovies &&
+                    trendingMovies.map((movie, index) => (
+                      <div key={index}>
+                        <Card movie={movie.id} data={movie} />
+                      </div>
+                    ))}
+                </div>
+                <i
+                  id="right"
+                  className="fa-solid fas fa-angle-right"
+                  onClick={scrollRightTrending}
+                ></i>
+              </div>
             </div>
-            <div className="wrapper">
-              <div className="wrapper-heading">
-                <h4>All Movies</h4>
-                <NavLink className="view-more-btn" to={"/all/movies"}>
-                  View More
-                </NavLink>
-              </div>
-              <div className="all-movies-home">
-                {allMovies &&
-                  allMovies.map((movie, index) => (
-                    <div key={index}>
-                      <Card data={movie} />
-                    </div>
-                  ))}
-              </div>
-            </div>
-            <div className="wrapper">
-              <div className="wrapper-heading">
-                <h4>Trending Movies</h4>
-              </div>
-              <i
-                id="left"
-                className="fa-solid fas fa-angle-left"
-                onClick={scrollleftTrending}
-              ></i>
-              <div className="carousel" ref={carouselRefTrending}>
-                {trendingMovies &&
-                  trendingMovies.map((movie, index) => (
-                    <div key={index}>
-                      <Card movie={movie.id} data={movie} />
-                    </div>
-                  ))}
-              </div>
-              <i
-                id="right"
-                className="fa-solid fas fa-angle-right"
-                onClick={scrollRightTrending}
-              ></i>
-            </div>
-          </div>
-        </section>
+          </section>
+        </>
       )}
     </>
   );

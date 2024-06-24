@@ -474,7 +474,16 @@ const Add_Movie = () => {
                 </div>
 
                 <button className="form-button" type="submit">
-                  Add To Database
+                  {loading ? (
+                    <>
+                      <span
+                        class="spinner-border text-light"
+                        role="status"
+                      ></span>
+                    </>
+                  ) : (
+                    "Add To Database"
+                  )}
                 </button>
               </div>
             </form>

@@ -9,6 +9,7 @@ import ReactPaginate from "react-paginate";
 import { toast } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { LuSearchX } from "react-icons/lu";
 
 const All_Movies = () => {
   const dispatch = useDispatch();
@@ -59,14 +60,21 @@ const All_Movies = () => {
               <div className="wrapper-heading">
                 <h4>All Movies And Series</h4>
               </div>
-              <div className="all-movies-home">
-                {allMovies &&
-                  allMovies.map((movie, index) => (
-                    <div key={index}>
-                      <Card data={movie} />
-                    </div>
-                  ))}
-              </div>
+              {allMovies.length > 0 ? (
+                <div className="all-movies-home">
+                  {allMovies &&
+                    allMovies.map((movie, index) => (
+                      <div key={index}>
+                        <Card data={movie} />
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                <div className="noMovies">
+                  <h1>No Movies Found</h1> <LuSearchX className="notfound" />
+                </div>
+              )}
+
               {totalPages && totalPages > 1 ? (
                 <div className="pagination-box">
                   <ReactPaginate

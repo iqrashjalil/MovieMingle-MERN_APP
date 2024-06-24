@@ -78,8 +78,10 @@ ul {
   margin-top: 10px;
 }
 
-.socials ul li {
+.socials ul a {
   display: flex;
+  text-decoration: none;
+  color: aliceblue;
 
   align-items: center;
 }

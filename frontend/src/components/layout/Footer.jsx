@@ -69,14 +69,20 @@ const Footer = () => {
         <div className="socials">
           <h1>Socials </h1>
           <ul>
-            <li className="facebook-li">
+            <NavLink
+              to={"https://www.facebook.com/igiqrash1"}
+              className="facebook-li"
+            >
               {" "}
               <FaFacebook className="footer-facebook-icon" /> Facebook
-            </li>
-            <li className="instagram-li">
+            </NavLink>
+            <NavLink
+              to={"https://www.instagram.com/iqrashjalil/"}
+              className="instagram-li"
+            >
               {" "}
               <FiInstagram className="footer-instagram-icon" /> Instagram
-            </li>
+            </NavLink>
           </ul>
         </div>
         <hr className="footer-hr" />
@@ -86,11 +92,11 @@ const Footer = () => {
               <IoHomeSharp className="navbar-icon" />
               Home
             </NavLink>
-            <NavLink to={"/all/movies"}>
+            <NavLink to={"/all/onlymovies"}>
               <RiMovieFill className="navbar-icon" />
               Movies
             </NavLink>
-            <NavLink>
+            <NavLink to={"/all/onlyshows"}>
               <RiSlideshow3Fill className="navbar-icon" />
               Web Series
             </NavLink>

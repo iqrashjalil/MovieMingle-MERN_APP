@@ -67,7 +67,14 @@ const Signin = () => {
               />
             </div>
             <button type="submit" className="auth-button">
-              Login
+              {loading ? (
+                <span
+                  class="spinner-border spinner-border-sm"
+                  aria-hidden="true"
+                ></span>
+              ) : (
+                "Login"
+              )}
             </button>
           </form>
         </div>

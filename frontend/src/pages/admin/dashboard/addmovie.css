@@ -151,6 +151,7 @@
 .form-button {
   padding: 10px;
   margin-top: 30px;
+  height: 50px;
   border: none;
   background-color: red;
   font-size: 17px;
@@ -163,9 +164,11 @@
 
 .form-button:hover {
   background-color: white;
-  color: red;
+  color: red !important;
 }
-
+.form-button:hover .spinner-border {
+  color: red !important;
+}
 @media screen and (max-width: 768px) {
   .add-movie-section {
     flex-direction: column;
