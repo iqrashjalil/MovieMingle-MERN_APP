@@ -19,6 +19,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import Card from "../../components/card/Card.jsx";
 import {} from "react-icons/md";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Mvoie_Details = () => {
   const { id } = useParams();
@@ -57,7 +58,6 @@ const Mvoie_Details = () => {
   //* Fetching the cast of the movie or web series
 
   const carouselRef = useRef(null);
-  const carouselRefCast = useRef(null);
   const scrollLeft = () => {
     carouselRef.current.scrollBy({ left: -200, behavior: "smooth" });
   };
@@ -66,12 +66,6 @@ const Mvoie_Details = () => {
     carouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
   };
 
-  const scrollRightCast = () => {
-    carouselRefCast.current.scrollBy({ left: 200, behavior: "smooth" });
-  };
-  const scrollLeftCast = () => {
-    carouselRefCast.current.scrollBy({ left: -200, behavior: "smooth" });
-  };
   return (
     <>
       {loading ? (
@@ -174,11 +168,9 @@ const Mvoie_Details = () => {
                   <div className="wrapper-heading">
                     <h4>You May Like</h4>
                   </div>
-                  <i
-                    id="left"
-                    className="fa-solid fas fa-angle-left"
-                    onClick={scrollLeft}
-                  ></i>
+                  <i id="left" onClick={scrollLeft}>
+                    <FaAngleLeft />
+                  </i>
                   <div className="carousel" ref={carouselRef}>
                     {recommendations &&
                       recommendations.map((movie, index) => (
@@ -187,11 +179,9 @@ const Mvoie_Details = () => {
                         </div>
                       ))}
                   </div>
-                  <i
-                    id="right"
-                    className="fa-solid fas fa-angle-right"
-                    onClick={scrollRight}
-                  ></i>
+                  <i id="right" onClick={scrollRight}>
+                    <FaAngleRight />
+                  </i>
                 </div>
               </div>
             </div>

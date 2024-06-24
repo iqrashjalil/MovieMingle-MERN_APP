@@ -13,6 +13,7 @@ import {
 } from "../store/slices/moviesSlice.jsx";
 import { toast } from "react-toastify";
 import Loader from "../components/Loader/Loader.jsx";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const Home = () => {
   const carouselRef = useRef(null);
   const carouselRefTrending = useRef(null);
@@ -69,11 +70,10 @@ const Home = () => {
                 <div className="wrapper-heading">
                   <h4>Recent Added</h4>
                 </div>
-                <i
-                  id="left"
-                  className="fa-solid fas fa-angle-left"
-                  onClick={scrollLeft}
-                ></i>
+                <i id="left" onClick={scrollLeft}>
+                  <FaAngleLeft />
+                </i>
+
                 <div className="carousel" ref={carouselRef}>
                   {recentMovie &&
                     recentMovie.map((movie, index) => (
@@ -82,11 +82,9 @@ const Home = () => {
                       </div>
                     ))}
                 </div>
-                <i
-                  id="right"
-                  className="fa-solid fas fa-angle-right"
-                  onClick={scrollRight}
-                ></i>
+                <i id="right" onClick={scrollRight}>
+                  <FaAngleRight />
+                </i>
               </div>
               <div className="wrapper">
                 <div className="wrapper-heading">
@@ -108,11 +106,9 @@ const Home = () => {
                 <div className="wrapper-heading">
                   <h4>Trending Movies</h4>
                 </div>
-                <i
-                  id="left"
-                  className="fa-solid fas fa-angle-left"
-                  onClick={scrollleftTrending}
-                ></i>
+                <i id="left" onClick={scrollleftTrending}>
+                  <FaAngleLeft />
+                </i>
                 <div className="carousel" ref={carouselRefTrending}>
                   {trendingMovies &&
                     trendingMovies.map((movie, index) => (
@@ -121,11 +117,9 @@ const Home = () => {
                       </div>
                     ))}
                 </div>
-                <i
-                  id="right"
-                  className="fa-solid fas fa-angle-right"
-                  onClick={scrollRightTrending}
-                ></i>
+                <i id="right" onClick={scrollRightTrending}>
+                  <FaAngleRight />
+                </i>
               </div>
             </div>
           </section>
