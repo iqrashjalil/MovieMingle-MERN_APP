@@ -200,7 +200,13 @@
     width: 100%;
   }
   .search-results-dropdown {
-    top: 52vh;
+    top: 35.5vh;
     width: 94.5%;
+  }
+  .show-dropdown {
+    top: 46.5vh;
+  }
+  .new-hr {
+    display: none;
   }
 }

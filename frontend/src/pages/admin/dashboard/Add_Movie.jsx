@@ -264,7 +264,7 @@ const Add_Movie = () => {
             <div className="input">
               <label htmlFor="showSearch">Search Show</label>
               <input
-                type="text"
+                type="search"
                 name="showSearch"
                 required
                 className="movie-search-input"
@@ -275,7 +275,7 @@ const Add_Movie = () => {
               {showSearchResults &&
                 showSearchResults.length > 0 &&
                 isSearchOpen && (
-                  <div className="search-results-dropdown">
+                  <div className="search-results-dropdown show-dropdown">
                     {showSearchResults.map((show) => (
                       <div
                         key={show.id}
