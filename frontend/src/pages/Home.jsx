@@ -16,6 +16,7 @@ import Loader from "../components/Loader/Loader.jsx";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const Home = () => {
   const carouselRef = useRef(null);
+
   const carouselRefTrending = useRef(null);
   const scrollLeft = () => {
     carouselRef.current.scrollBy({ left: -200, behavior: "smooth" });
@@ -41,6 +42,7 @@ const Home = () => {
       toast.error(error);
       dispatch(clearError());
     }
+
     const params = new URLSearchParams(location.search);
     const year = params.get("year");
     const rating = params.get("rating");
@@ -58,11 +60,23 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          <div class="alert alert-primary" role="alert">
-            (For Admin Actions use these ("/admin/signin") - ("/admin/register")
-            - ("/admin/dashboard") infront of the url) - admin panel login
-            credentials (Email: test@gmail.com | Password: test@1)
-          </div>{" "}
+          {/* <div class="alert alert-primary" role="alert">
+            <h4 class="alert-heading">Information!</h4>
+            <p>
+              For Admin Actions use the following infront of the url <br /> like
+              (http://moviemingle.onrender.com/admin/signin) <br />{" "}
+              ("/admin/signin") for admin login <br /> ("/admin/register") for
+              admin registration <br /> ("/admin/dashboard") for admin dashboard
+              )
+            </p>
+            <hr />
+
+            <p class="mb-0">
+              admin panel login credentials (Email: test@gmail.com | Password:
+              test@1)
+            </p>
+          </div> */}
+
           <section className="home-section">
             <Sidebar />
             <div className="home-container">

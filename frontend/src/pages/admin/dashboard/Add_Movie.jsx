@@ -221,6 +221,7 @@ const Add_Movie = () => {
                 type="search"
                 name="movieSearch"
                 required
+                className="movie-search-input"
                 placeholder="Enter Movie Title Here To Search"
                 value={movieQuery}
                 onChange={(e) => {
@@ -266,6 +267,7 @@ const Add_Movie = () => {
                 type="text"
                 name="showSearch"
                 required
+                className="movie-search-input"
                 placeholder="Enter Show Title Here To Search"
                 value={showQuery}
                 onChange={(e) => setShowQuery(e.target.value)}

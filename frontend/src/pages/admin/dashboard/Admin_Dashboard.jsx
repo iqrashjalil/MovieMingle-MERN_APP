@@ -16,7 +16,9 @@ import { useNavigate } from "react-router-dom";
 const Admin_Dashboard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { loading, totalUsers } = useSelector((state) => state.user);
+  const { loading, totalUsers, isAuthenticated } = useSelector(
+    (state) => state.user
+  );
   const { recentMovie, moviesCount, moviesrequests } = useSelector(
     (state) => state.movies
   );
@@ -25,7 +27,9 @@ const Admin_Dashboard = () => {
     dispatch(fetchMovies({}));
     dispatch(fetchRequestedMovies(5));
   }, [dispatch]);
-
+  if (!isAuthenticated) {
+    navigate("/admin/signin");
+  }
   useEffect(() => {
     if (!totalUsers && !loading) {
       dispatch(getUsers());
