@@ -60,7 +60,7 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          {/* <div class="alert alert-primary" role="alert">
+          <div class="alert alert-primary" role="alert">
             <h4 class="alert-heading">Information!</h4>
             <p>
               For Admin Actions use the following infront of the url <br /> like
@@ -75,7 +75,7 @@ const Home = () => {
               admin panel login credentials (Email: test@gmail.com | Password:
               test@1)
             </p>
-          </div> */}
+          </div>
 
           <section className="home-section">
             <Sidebar />
