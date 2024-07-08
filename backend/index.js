@@ -7,8 +7,6 @@ import movieRoutes from "./routes/movie-routes.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import cors from "cors";
-import path from "path";
-import { fileURLToPath } from "url";
 dotenv.config({ path: "./config/config.env" });
 
 const app = express();
@@ -31,18 +29,6 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/movie", movieRoutes);
 
-// Deployment setup
-const __filename = fileURLToPath(import.meta.url);
-const __dirname1 = path.dirname(__filename);
-
-// Reference the static files from the client build directory
-
-app.use(express.static(path.join(__dirname1, "../frontend/dist")));
-
-// Catch-all route to serve the index.html file
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname1, "../frontend/dist", "index.html"));
-});
 app.get("/", (req, res) => {
   res.send("Hello from the backend!");
 });
