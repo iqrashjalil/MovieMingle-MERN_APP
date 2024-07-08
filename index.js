@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 connectDb();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://movie-mingle-mern-app.vercel.app",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
