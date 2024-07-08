@@ -29,10 +29,6 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/movie", movieRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Hello from the backend!");
-});
-
 //* Middleware
 app.use(errorMiddleware);
 app.listen(PORT, () => {
