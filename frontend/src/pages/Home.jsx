@@ -63,8 +63,7 @@ const Home = () => {
           <div class="alert alert-primary" role="alert">
             <h4 class="alert-heading">Information!</h4>
             <p>
-              For Admin Actions use the following infront of the url <br /> like
-              (http://moviemingle.onrender.com/admin/signin) <br />{" "}
+              For Admin Actions use the following infront of the url <br />
               ("/admin/signin") for admin login <br /> ("/admin/register") for
               admin registration <br /> ("/admin/dashboard") for admin dashboard
               )
