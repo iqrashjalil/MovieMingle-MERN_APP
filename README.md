@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
     npm install
     ```
 
-4.  ### Admin Panel
+4.  ### Add Environment Variables
 
     PORT:
 
