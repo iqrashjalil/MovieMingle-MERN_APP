@@ -75,8 +75,8 @@ To run this project locally, follow these steps:
 - **Express.js**: Backend framework
 - **React.js**: Frontend library
 - **Node.js**: Backend runtime environment
-  **Mongoose**: ODM for MongoDB
-  **Redux-Toolkit**: State management for React
+- **Mongoose**: ODM for MongoDB
+- **Redux-Toolkit**: State management for React
 - **Cloudinary**: Image storage and file uploads
 
 ## Contact
