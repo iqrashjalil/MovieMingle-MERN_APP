@@ -30,26 +30,55 @@ MovieMingle is a comprehensive movie downloading app that offers search function
 
 To run this project locally, follow these steps:
 
-1. **Clone the repository**:
+1.  **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/yourusername/MovieMingle.git
-   ```
+    ```bash
+    git clone https://github.com/yourusername/MovieMingle.git
+    ```
 
-2. **Navigate to the project directory**:
+2.  **Navigate to the project directory**:
 
-   ```bash
-   cd MovieMingle
-   ```
+    ```bash
+    cd MovieMingle
+    ```
 
-3. **Install dependencies**:
+3.  **Install dependencies**:
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
-4. **Set up environment variables**:
+4.  ### Admin Panel
 
-   ```bash
-   npm install
-   ```
+    PORT:
+
+    MONGODB_URI:
+
+    MONGODB_ATLAS:
+
+    JWT_SECRET_KEY:
+
+    JWT_EXPIRE:
+
+    JWT_COOKIE_EXPIRE:
+
+5.  **Run The Application**:
+
+    ```bash
+    npm start
+    ```
+
+## Technologies Used
+
+- **MongoDB**: Database.
+
+- **Express.js**: Backend framework
+- **React.js**: Frontend library
+- **Node.js**: Backend runtime environment
+  **Mongoose**: ODM for MongoDB
+  **Redux-Toolkit**: State management for React
+- **Cloudinary**: Image storage and file uploads
+
+## Contact
+
+- **Email**: iqrashjalil@gmail.com
