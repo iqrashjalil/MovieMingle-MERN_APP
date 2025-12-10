@@ -66,25 +66,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="footer-hr" />
-        <div className="socials">
-          <h1>Socials </h1>
-          <ul>
-            <NavLink
-              to={"https://www.facebook.com/igiqrash1"}
-              className="facebook-li"
-            >
-              {" "}
-              <FaFacebook className="footer-facebook-icon" /> Facebook
-            </NavLink>
-            <NavLink
-              to={"https://www.instagram.com/iqrashjalil/"}
-              className="instagram-li"
-            >
-              {" "}
-              <FiInstagram className="footer-instagram-icon" /> Instagram
-            </NavLink>
-          </ul>
-        </div>
+       
         <hr className="footer-hr" />
         <div className="footer-right">
           <ul>
