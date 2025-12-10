@@ -66,7 +66,25 @@ const Footer = () => {
           </div>
         </div>
         <hr className="footer-hr" />
-       
+        <div className="socials">
+          <h1>Socials </h1>
+          <ul>
+            <NavLink
+              to={"https://www.facebook.com/saad.mehboob.35?mibextid=wwXIfr&rdid=R85fwOy0qRKBhHVa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FoouAayf1%2F%3Fmibextid%3DwwXIfr#"}
+              className="facebook-li"
+            >
+              {" "}
+              <FaFacebook className="footer-facebook-icon" /> Facebook
+            </NavLink>
+            <NavLink
+              to={"https://www.instagram.com/saadmehboob25?igsh=MXBpanU2MGptZG9reQ%3D%3D&utm_source=qr"}
+              className="instagram-li"
+            >
+              {" "}
+              <FiInstagram className="footer-instagram-icon" /> Instagram
+            </NavLink>
+          </ul>
+        </div>
         <hr className="footer-hr" />
         <div className="footer-right">
           <ul>
